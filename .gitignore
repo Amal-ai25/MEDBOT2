@@ -1,0 +1,29 @@
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# PyTorch / Hugging Face model files (large files)
+models/
+adapters/
+*.pt
+*.bin
+*.safetensors
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Docker cache (optional)
+*.tar

@@ -1,0 +1,8 @@
+{
+  "base_model_id": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "dataset_dir": "datasets/medical_meadow_wikidoc_patient_information",
+  "gguf_dir": "models/tinyllama_gguf",
+  "tokenizer_dir": "models/tinyllama_transformers",
+  "base_model_dir": "models/tinyllama_transformers",
+  "adapter_dir": "adapters/tinyllama_medbot_lora"
+}

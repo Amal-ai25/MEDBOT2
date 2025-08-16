@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MedBot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f9;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .response-box {
+            background-color: white;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            max-height: 500px;      /* limit box height */
+            overflow-y: auto;       /* scroll if text too long */
+        }
+        .label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <h1>MedBot</h1>
+    <form method="post">
+        <textarea name="user_input" rows="5" placeholder="Ask a medical question...">{{ user_input }}</textarea>
+        <br>
+        <button type="submit">Aski</button>
+    </form>
+
+    {% if response %}
+    <div class="response-box">
+        <div class="label">Response:</div>
+        {{ response }}
+    </div>
+    {% endif %}
+
+    <script>
+const form = document.querySelector('form');
+form.addEventListener('submit', () => {
+    const btn = form.querySelector('button');
+    btn.disabled = true;
+    btn.innerText = "Generating...";
+});
+</script>
+
+</body>
+</html>

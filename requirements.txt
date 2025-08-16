@@ -1,0 +1,8 @@
+flask
+transformers>=4.42.0
+torch
+accelerate
+bitsandbytes
+peft
+sentencepiece
+tokenizers
